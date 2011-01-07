@@ -1,0 +1,10 @@
+<%= form_for(@new_lesson) do |f| %>
+  <div>
+    <%= f.error_messages my_error_opts %>
+  </div>
+  <div>
+    <%= f.label :name, :class => :hidden %>
+    <%= f.text_field :name, { :placeholder => "Name", :autofocus => true, :required => true } %>
+    <%= f.submit %>
+  </div>
+<% end %>

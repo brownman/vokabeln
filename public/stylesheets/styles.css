@@ -1,0 +1,76 @@
+* { margin: 0; padding: 0; }
+
+.hidden {
+  position: absolute; left: -9999px; /* screen-reader accessible hiding */
+}
+
+body {
+  background: #fff1b5; color: #000;
+  font: 14px Helvetica, Arial, sans-serif;
+  line-height: 24px;
+}
+
+#wrapper {
+  background: #fff;
+  box-shadow: 0 0 20px #e8c635; -moz-box-shadow: 0 0 20px #e8c635; -webkit-box-shadow: 0 0 20px #e8c635;
+  width: 700px; margin: 20px auto; padding: 30px 20px 10px;
+}
+
+h1, p, table, #lessons, .flash, .actions, .new_vocable, .errorExplanation {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; }
+h1 { font-size: 32px; }
+h4, h5, h6 { font-size: inherit; }
+
+#header { overflow: hidden; line-height: 42px; }
+#header h1 { float: left; width: 500px; }
+#header h1 .type { color: #888; }
+#header-right { float: right; width: 200px; text-align: right; }
+
+.flash {
+  padding: 4px 8px;
+  border-style: solid; border-width: 1px;
+  color: #fff;
+}
+.flash.error { background: #fdd; border-color: #faa; }
+.flash.notice { background: #22d; }
+.flash.success { background: #afa; border-color: #dfd; }
+
+#lessons { list-style: none; }
+#lessons li.lesson {
+  font-size: 18px;
+  padding: 10px;
+  border-top: 1px solid #aaa;
+}
+
+.errorExplanation {
+  font-size: 14px;
+  background: #fcc;
+  padding: 10px;
+}
+.errorExplanation h4 {}
+.errorExplanation ul { margin-left: 20px; }
+
+.delete-button {
+  background: #d22; color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+.delete-button:hover {
+  background: #a00;
+}
+
+form input { padding: 2px 4px; }
+form .field_with_errors { display: inline-block; }
+form input, form label { margin-right: 5px; }
+
+.vocables { width: 100%; border-spacing: 0; }
+.vocables td, .vocables th { padding: 0 6px; }
+.vocables thead { font-size: 15px; line-height: 30px; }
+.vocables thead tr { background: #666; color: #fff; }
+.vocables th { text-align: left; }
+.vocables tbody { font-size: 13px; line-height: 25px; }
+.vocables tbody tr:nth-child(odd) { background: #fff; }
+.vocables tbody tr:nth-child(even) { background: #ccc; }

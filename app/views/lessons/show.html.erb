@@ -1,0 +1,15 @@
+<% content_for :header do %>
+  <span class="type">Lesson:</span> <%= @lesson.name %>
+<% end %>
+
+<% content_for :header_right do %>
+  <%= link_to "Back to all", lessons_path %>
+<% end %>
+
+<%= render :partial => 'vocables/table', :locals => { :vocables => @lesson.saved_vocables } %>
+
+<%= render 'vocables/form' %>
+
+<div class="actions">
+  <%= link_to 'Delete lesson', @lesson, :confirm => "This lesson and all it's vocables will be deleted. Are you sure?", :method => :delete, :class => 'delete-button' %>
+</div>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  foreign: MyString
+  translation: MyString
+
+two:
+  foreign: MyString
+  translation: MyString

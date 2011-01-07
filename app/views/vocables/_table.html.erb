@@ -1,0 +1,22 @@
+<table class="vocables" id="vocables">
+  <colgroup>
+    <col width="35%" />
+    <col width="35%" />
+    <col width="30%" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Foreign word</th>
+      <th>Translation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if vocables.empty? -%>
+      <tr id="no-vocables-notice">
+        <td colspan="3">No vocables yet. Use the form below to add some.</td>
+      </tr>
+    <% else -%>
+      <%= render :partial => 'vocables/table_row', :collection => vocables, :as => :vocable %>
+    <% end -%>
+  </tbody>
+</table>

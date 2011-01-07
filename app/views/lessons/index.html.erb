@@ -1,0 +1,9 @@
+<% if @lessons.empty? %>
+  <p>Oh, you don't have any lessons yet!</p>
+<% end %>
+<ul id="lessons">
+  <% for lesson in @lessons -%>
+    <li class="lesson"><%= link_to lesson.name, lesson %></li>
+  <% end %>
+  <li class="lesson"><%= render "form" %></li>
+</ul>

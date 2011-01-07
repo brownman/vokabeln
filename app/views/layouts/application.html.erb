@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title><%= title %> &ndash; <%= app_name %></title>
+<%= stylesheet_link_tag :all %>
+<%= csrf_meta_tag %>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+    <h1>
+      <%= content_for?(:header) ? yield(:header) : title %>
+    </h1>
+    <% if content_for? :header_right %>
+      <div id="header-right">
+        <%= yield :header_right %>
+      </div>
+    <% end %>
+  </div>
+  <%= raw flash_content %>
+  <%= yield %>
+</div>
+<%= javascript_include_tag 'jquery', 'rails' %>
