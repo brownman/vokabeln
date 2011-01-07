@@ -36,10 +36,4 @@ class VocablesController < ApplicationController
     @vocable = Vocable.find(params[:id])
     @success = @vocable.check_foreign(params[:vocable][:foreign])
   end
-  
-  #def next
-  #  vocable = Vocable.find(params[:id])
-  #  lesson = vocable.lesson
-  #  redirect_to 
-  #end
 end
