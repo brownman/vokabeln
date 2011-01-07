@@ -6,6 +6,8 @@
   <%= link_to "Back to all", lessons_path %>
 <% end %>
 
+<%= link_to "Test yourself", test_lesson_path(@lesson) %>
+
 <%= render :partial => 'vocables/table', :locals => { :vocables => @lesson.saved_vocables } %>
 
 <%= render 'vocables/form' %>

@@ -1,0 +1,7 @@
+<% if @success -%>
+  <%= ["Fine", "Well done"].sample %>
+<% else -%>
+  <p>Nope, the expression is <%= @vocable.foreign %></p>
+<% end -%>
+
+<%= link_to "Next vocable", test_lesson_path(@vocable.lesson) %>

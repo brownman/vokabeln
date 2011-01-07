@@ -1,0 +1,8 @@
+<dl>
+  <%= form_for [@vocable.lesson, @vocable], :url => check_lesson_vocable_path(@vocable.lesson, @vocable) do |f| -%>
+    <dt>Translation: </dt>
+    <dd><%= @vocable.translation %></dd>
+    <dt>Foreign expression: </dt>
+    <dd><%= f.text_field :foreign, :value => '', :autofocus => true %></dd>
+  <% end -%>
+</dl>

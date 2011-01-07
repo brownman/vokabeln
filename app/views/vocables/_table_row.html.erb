@@ -1,4 +1,5 @@
-<tr>
+<tr id="vocable_<%= vocable.id %>">
   <td><%= vocable.foreign %></td>
   <td><%= vocable.translation %></td>
+  <td><%= link_to 'Delete', [vocable.lesson, vocable], :method => :delete, :class => 'delete-button', :remote => true %></td>
 </tr>

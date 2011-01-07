@@ -8,4 +8,8 @@ class Lesson < ActiveRecord::Base
       vocable.new_record?
     end
   end
+  
+  def random_vocable
+    vocables[rand(vocables.size)]
+  end
 end

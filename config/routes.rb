@@ -1,24 +1,23 @@
 Vokabeln::Application.routes.draw do
   root :to => "lessons#index"
   
+  # Workaround for bug below (see http://stackoverflow.com/questions/3937823/weird-routing-error-in-rails-3-0)
+  match '/lessons/:lesson_id/vocables/:id/check(.:format)', :to => "vocables#check", :as => :check_lesson_vocable
+  
   resources :lessons do
-    resources :vocables
+    member do
+      get 'test'
+    end
+    
+    resources :vocables do
+      member do
+        get 'ask'
+        # Doesn't work! Rails bug!
+        #post 'check'
+      end
+    end
   end
   
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
   # Sample resource route with options:
   #   resources :products do
   #     member do

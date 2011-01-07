@@ -1,0 +1,4 @@
+(function() {
+  var vocable = $('#vocable_<%= @vocable.id %>');
+  vocable.fadeOut(400, function() { vocable.remove(); });
+})();
