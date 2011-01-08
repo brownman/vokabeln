@@ -15,9 +15,13 @@
     </div>
   <% end -%>
   <div id="header">
-    <h1>
-      <%= content_for?(:header) ? yield(:header) : title %>
-    </h1>
+    <% if content_for? :header -%>
+      <%= yield :header %>
+    <% else -%>
+      <h1 class="<%= "full-width" unless content_for? :header_right %>">
+        <%= title %>
+      </h1>
+    <% end -%>
     <% if content_for? :header_right %>
       <div id="header-right">
         <%= yield :header_right %>

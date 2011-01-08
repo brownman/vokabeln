@@ -22,38 +22,59 @@
   outline: none;
 }
 
-/* line 6, ../../app/stylesheets/styles.scss */
+/* line 13, ../../app/stylesheets/styles.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 8, ../../app/stylesheets/styles.scss */
+/* line 15, ../../app/stylesheets/styles.scss */
 .hidden {
   position: absolute;
   left: -9999px;
   /* screen-reader accessible hiding */
 }
 
-/* line 11, ../../app/stylesheets/styles.scss */
+/* line 18, ../../app/stylesheets/styles.scss */
 .right {
   float: right;
 }
 
-/* line 12, ../../app/stylesheets/styles.scss */
+/* line 19, ../../app/stylesheets/styles.scss */
 .left {
   float: left;
 }
 
-/* line 14, ../../app/stylesheets/styles.scss */
+/* line 20, ../../app/stylesheets/styles.scss */
+.align-left {
+  text-align: left;
+}
+
+/* line 21, ../../app/stylesheets/styles.scss */
+.align-center {
+  text-align: center;
+}
+
+/* line 22, ../../app/stylesheets/styles.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 23, ../../app/stylesheets/styles.scss */
+.serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* line 25, ../../app/stylesheets/styles.scss */
 body {
+  font-family: Helvetica, Arial, sans-serif;
   background: #fff1b5;
   color: #000;
-  font: 14px Helvetica, Arial, sans-serif;
+  font-size: 14px;
   line-height: 24px;
 }
 
-/* line 20, ../../app/stylesheets/styles.scss */
+/* line 31, ../../app/stylesheets/styles.scss */
 #wrapper {
   -moz-box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
   -webkit-box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
@@ -65,94 +86,94 @@ body {
   padding: 30px 20px 10px;
 }
 
-/* line 26, ../../app/stylesheets/styles.scss */
+/* line 37, ../../app/stylesheets/styles.scss */
 h1, p, table, #lessons, .flash, .actions, .new_vocable, .errorExplanation {
   margin-bottom: 20px;
 }
 
-/* line 30, ../../app/stylesheets/styles.scss */
+/* line 41, ../../app/stylesheets/styles.scss */
 h1, h2, h3 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: normal;
 }
 
-/* line 31, ../../app/stylesheets/styles.scss */
-h1 {
-  font-size: 32px;
-}
-
-/* line 32, ../../app/stylesheets/styles.scss */
+/* line 42, ../../app/stylesheets/styles.scss */
 h4, h5, h6 {
   font-size: inherit;
 }
 
-/* line 34, ../../app/stylesheets/styles.scss */
+/* line 44, ../../app/stylesheets/styles.scss */
 #header {
   overflow: hidden;
   line-height: 42px;
+  position: relative;
 }
-/* line 36, ../../app/stylesheets/styles.scss */
+/* line 47, ../../app/stylesheets/styles.scss */
 #header h1 {
+  font-size: 32px;
   float: left;
   width: 500px;
 }
-/* line 38, ../../app/stylesheets/styles.scss */
+/* line 50, ../../app/stylesheets/styles.scss */
+#header h1.full-width {
+  width: 100%;
+}
+/* line 51, ../../app/stylesheets/styles.scss */
 #header h1 .type {
   color: #888;
 }
-
-/* line 41, ../../app/stylesheets/styles.scss */
-#header-right {
+/* line 53, ../../app/stylesheets/styles.scss */
+#header #header-right {
   float: right;
   width: 200px;
   text-align: right;
 }
 
-/* line 43, ../../app/stylesheets/styles.scss */
+/* line 56, ../../app/stylesheets/styles.scss */
 .flash {
   padding: 4px 8px;
   border-style: solid;
   border-width: 1px;
   color: #fff;
 }
-/* line 47, ../../app/stylesheets/styles.scss */
+/* line 60, ../../app/stylesheets/styles.scss */
 .flash.error {
   background: #fdd;
   border-color: #faa;
 }
-/* line 48, ../../app/stylesheets/styles.scss */
+/* line 61, ../../app/stylesheets/styles.scss */
 .flash.notice {
   background: #22d;
 }
-/* line 49, ../../app/stylesheets/styles.scss */
+/* line 62, ../../app/stylesheets/styles.scss */
 .flash.success {
   background: #afa;
   border-color: #dfd;
 }
 
-/* line 52, ../../app/stylesheets/styles.scss */
+/* line 65, ../../app/stylesheets/styles.scss */
 #lessons {
   list-style: none;
 }
-/* line 54, ../../app/stylesheets/styles.scss */
+/* line 67, ../../app/stylesheets/styles.scss */
 #lessons li.lesson {
   font-size: 18px;
   padding: 10px;
   border-top: 1px solid #aaa;
 }
 
-/* line 61, ../../app/stylesheets/styles.scss */
+/* line 74, ../../app/stylesheets/styles.scss */
 .errorExplanation {
   font-size: 14px;
   background: #fcc;
   padding: 10px;
 }
-/* line 66, ../../app/stylesheets/styles.scss */
+/* line 79, ../../app/stylesheets/styles.scss */
 .errorExplanation ul {
   margin-left: 20px;
 }
 
-/* line 69, ../../app/stylesheets/styles.scss */
+/* line 82, ../../app/stylesheets/styles.scss */
 .button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -216,7 +237,7 @@ h4, h5, h6 {
   color: white;
 }
 
-/* line 72, ../../app/stylesheets/styles.scss */
+/* line 85, ../../app/stylesheets/styles.scss */
 .delete-button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -280,68 +301,85 @@ h4, h5, h6 {
   color: white;
 }
 
-/* line 75, ../../app/stylesheets/styles.scss */
+/* line 88, ../../app/stylesheets/styles.scss */
 .delete-link {
   color: #d22;
 }
-/* line 77, ../../app/stylesheets/styles.scss */
+/* line 90, ../../app/stylesheets/styles.scss */
 .delete-link:hover {
   text-decoration: none;
 }
 
-/* line 81, ../../app/stylesheets/styles.scss */
+/* line 94, ../../app/stylesheets/styles.scss */
 form input {
   padding: 2px 4px;
 }
-/* line 82, ../../app/stylesheets/styles.scss */
+/* line 95, ../../app/stylesheets/styles.scss */
 form .field_with_errors {
   display: inline-block;
 }
-/* line 83, ../../app/stylesheets/styles.scss */
+/* line 96, ../../app/stylesheets/styles.scss */
 form input, form form label {
   margin-right: 5px;
 }
 
-/* line 86, ../../app/stylesheets/styles.scss */
+/* line 99, ../../app/stylesheets/styles.scss */
 form.new_vocable input[type=text] {
   width: 225px;
 }
 
-/* line 89, ../../app/stylesheets/styles.scss */
+/* line 102, ../../app/stylesheets/styles.scss */
 .vocables {
   width: 100%;
   border-spacing: 0;
 }
-/* line 92, ../../app/stylesheets/styles.scss */
+/* line 105, ../../app/stylesheets/styles.scss */
 .vocables td, .vocables th {
   padding: 0 6px;
 }
-/* line 93, ../../app/stylesheets/styles.scss */
+/* line 106, ../../app/stylesheets/styles.scss */
 .vocables th {
   text-align: left;
 }
-/* line 94, ../../app/stylesheets/styles.scss */
+/* line 107, ../../app/stylesheets/styles.scss */
 .vocables thead {
   font-size: 15px;
   line-height: 30px;
 }
-/* line 96, ../../app/stylesheets/styles.scss */
+/* line 109, ../../app/stylesheets/styles.scss */
 .vocables thead tr {
   background: #666;
   color: #fff;
 }
-/* line 98, ../../app/stylesheets/styles.scss */
+/* line 111, ../../app/stylesheets/styles.scss */
 .vocables tbody {
   font-size: 13px;
   line-height: 25px;
 }
-/* line 100, ../../app/stylesheets/styles.scss */
+/* line 113, ../../app/stylesheets/styles.scss */
 .vocables tbody tr:nth-child(odd) {
   background: #fff;
 }
-/* line 101, ../../app/stylesheets/styles.scss */
+/* line 114, ../../app/stylesheets/styles.scss */
 .vocables tbody tr:nth-child(even) {
   background: #ccc;
+}
+
+/* line 119, ../../app/stylesheets/styles.scss */
+#header #outer-404 {
+  font-size: 250px;
+  line-height: 250px;
+  margin: -40px 0 60px;
+  text-align: center;
+}
+
+/* line 124, ../../app/stylesheets/styles.scss */
+#inner-404 {
+  font-family: Georgia, "Times New Roman", serif;
+  position: absolute;
+  left: 255px;
+  top: 180px;
+  margin: 0;
 }
 
 @media screen {
