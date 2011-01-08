@@ -1,0 +1,7 @@
+<% content_for :header_right, render('vocables/search_form') %>
+
+<% if @vocables.empty? -%>
+  <p>Nothing found :-(</p>
+<% else -%>
+  <%= render :partial => 'table', :locals => { :vocables => @vocables } %>
+<% end -%>

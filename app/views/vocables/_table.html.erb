@@ -14,12 +14,9 @@
     </tr>
   </thead>
   <tbody>
-    <% if vocables.empty? -%>
-      <tr id="no-vocables-notice">
-        <td colspan="3">No vocables yet. Use the form below to add some.</td>
-      </tr>
-    <% else -%>
-      <%= render :partial => 'vocables/table_row', :collection => vocables, :as => :vocable %>
-    <% end -%>
+    <tr id="no-vocables-notice" class="<%= "totally-hidden" unless vocables.empty? %>">
+      <td colspan="3">No vocables yet. Use the form below to add some.</td>
+    </tr>
+    <%= render :partial => 'vocables/table_row', :collection => vocables, :as => :vocable %>
   </tbody>
 </table>

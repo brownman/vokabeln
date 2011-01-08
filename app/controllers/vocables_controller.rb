@@ -36,4 +36,18 @@ class VocablesController < ApplicationController
     @vocable = Vocable.find(params[:id])
     @success = @vocable.check_foreign(params[:vocable][:foreign])
   end
+  
+  def search
+    query = params[:q]
+    unless query.empty?
+      @vocables = Vocable.search(query)
+      
+      respond_to do |format|
+        format.js { render 'search.html', :layout => 'insert_content' }
+        format.html
+      end
+    else
+      redirect_to lessons_path
+    end
+  end
 end

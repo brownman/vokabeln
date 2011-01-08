@@ -2,7 +2,7 @@
   $('#new_vocable .errorExplanation').remove();
   <% if @new_vocable.errors.empty? -%>
     $('#vocables tbody').append("<%= escape_javascript(render :partial => 'table_row', :object => @new_vocable, :as => :vocable) %>");
-    $('#no-vocables-notice').hide();
+    $('#no-vocables-notice').addClass('totally-hidden');
     $('#new_vocable').get(0).reset();
     $('#vocable_foreign').focus();
   <% else -%>

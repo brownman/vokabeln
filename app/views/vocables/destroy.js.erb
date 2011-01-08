@@ -1,4 +1,6 @@
-(function() {
-  var vocable = $('#vocable_<%= @vocable.id %>');
-  vocable.fadeOut(400, function() { vocable.remove(); });
-})();
+$('#vocable_<%= @vocable.id %>').fadeOut(400, function() {
+  $(this).remove();
+  if ($('.vocable').length == 0) {
+    $('#no-vocables-notice').removeClass('totally-hidden');
+  }
+});

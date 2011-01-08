@@ -28,7 +28,9 @@
       </div>
     <% end %>
   </div>
-  <%= raw flash_content %>
-  <%= yield %>
+  <div id="content">
+    <%= raw flash_content %>
+    <%= yield %>
+  </div>
 </div>
-<%= javascript_include_tag 'jquery', 'rails' %>
+<%= javascript_include_tag 'jquery', 'rails', 'application' %>

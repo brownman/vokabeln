@@ -15,6 +15,7 @@
 .hidden {
   position: absolute; left: -9999px; /* screen-reader accessible hiding */
 }
+.totally-hidden { display: none; }
 .right { float: right; }
 .left { float: left; }
 .align-left { text-align: left; }

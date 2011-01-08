@@ -6,4 +6,9 @@ class Vocable < ActiveRecord::Base
   def check_foreign guess
     foreign == guess
   end
+  
+  def self.search query
+    query = "%#{query}%"
+    find :all, :conditions => ['`foreign` LIKE ? OR `translation` LIKE ?', query, query]
+  end
 end

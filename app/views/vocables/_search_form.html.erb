@@ -1,0 +1,4 @@
+<%= form_tag search_path, :remote => true, :method => :get do %>
+  <%= text_field_tag :q, "", :placeholder => "Search", :autofocus => true, :id => 'search-field' %>
+  <%= submit_tag "Start", :name => nil, :class => 'hidden' %>
+<% end -%>

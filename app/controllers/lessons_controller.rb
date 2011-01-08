@@ -3,6 +3,11 @@ class LessonsController < ApplicationController
     @title = "Lessons"
     @new_lesson ||= Lesson.new
     @lessons = Lesson.all
+    
+    respond_to do |format|
+      format.js { render 'index.html', :layout => 'insert_content' }
+      format.html
+    end
   end
   
   def show
