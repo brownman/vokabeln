@@ -1,12 +1,14 @@
-<% content_for :header do %>
+<% content_for :top do -%>
+  &larr; <%= link_to "All lessons", lessons_path %>
+<% end -%>
+
+<% content_for :header do -%>
   <span class="type">Lesson:</span> <%= @lesson.name %>
-<% end %>
+<% end -%>
 
-<% content_for :header_right do %>
-  <%= link_to "Back to all", lessons_path %>
-<% end %>
-
-<%= link_to "Test yourself", test_lesson_path(@lesson) %>
+<% content_for :header_right do -%>
+  <%= link_to "Test yourself", test_lesson_path(@lesson), :class => 'button' %>
+<% end -%>
 
 <%= render :partial => 'vocables/table', :locals => { :vocables => @lesson.saved_vocables } %>
 
