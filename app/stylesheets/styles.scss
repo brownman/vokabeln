@@ -1,0 +1,102 @@
+//@import "compass/reset";
+@import "fancy-buttons";
+
+* { margin: 0; padding: 0; }
+
+.hidden {
+  position: absolute; left: -9999px; /* screen-reader accessible hiding */
+}
+
+body {
+  background: #fff1b5; color: #000;
+  font: 14px Helvetica, Arial, sans-serif;
+  line-height: 24px;
+}
+
+#wrapper {
+  background: #fff;
+  box-shadow: 0 0 20px #e8c635; -moz-box-shadow: 0 0 20px #e8c635; -webkit-box-shadow: 0 0 20px #e8c635;
+  width: 700px; margin: 20px auto; padding: 30px 20px 10px;
+}
+
+h1, p, table, #lessons, .flash, .actions, .new_vocable, .errorExplanation {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; }
+h1 { font-size: 32px; }
+h4, h5, h6 { font-size: inherit; }
+
+#header {
+  overflow: hidden; line-height: 42px;
+  h1 {
+    float: left; width: 500px;
+    .type { color: #888; }
+  }
+}
+#header-right { float: right; width: 200px; text-align: right; }
+
+.flash {
+  padding: 4px 8px;
+  border-style: solid; border-width: 1px;
+  color: #fff;
+  &.error { background: #fdd; border-color: #faa; }
+  &.notice { background: #22d; }
+  &.success { background: #afa; border-color: #dfd; }
+}
+
+#lessons {
+  list-style: none;
+  li.lesson {
+    font-size: 18px;
+    padding: 10px;
+    border-top: 1px solid #aaa;
+  }
+}
+
+.errorExplanation {
+  font-size: 14px;
+  background: #fcc;
+  padding: 10px;
+  h4 {}
+  ul { margin-left: 20px; }
+}
+
+.button, .delete-button {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+.button {
+  @include fancy-button(#1b6896, 16px);
+}
+.delete-button {
+  @include fancy-button(#d22, 13px);
+}
+
+form {
+  input { padding: 2px 4px; }
+  .field_with_errors { display: inline-block; }
+  input, form label { margin-right: 5px; }
+}
+
+.vocables {
+  width: 100%; border-spacing: 0;
+  
+  td, th { padding: 0 6px; }
+  th { text-align: left; }
+  thead {
+    font-size: 15px; line-height: 30px;
+    tr { background: #666; color: #fff; }
+  }
+  tbody {
+    font-size: 13px; line-height: 25px;
+    tr:nth-child(odd) { background: #fff; }
+    tr:nth-child(even) { background: #ccc; }
+  }
+}
+
+@media print {}

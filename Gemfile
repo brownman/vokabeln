@@ -7,7 +7,10 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+# Frontend
 gem 'jquery-rails', '>= 0.2.6'
+gem 'compass', '>= 0.10.6'
+gem 'fancy-buttons', '>= 1.0.3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -22,7 +25,6 @@ gem 'jquery-rails', '>= 0.2.6'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
