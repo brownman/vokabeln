@@ -1,11 +1,15 @@
 //@import "compass/reset";
 @import "fancy-buttons";
+@import "compass/css3/box-shadow";
+@import "compass/utilities/print";
 
 * { margin: 0; padding: 0; }
 
 .hidden {
   position: absolute; left: -9999px; /* screen-reader accessible hiding */
 }
+.right { float: right; }
+.left { float: left; }
 
 body {
   background: #fff1b5; color: #000;
@@ -14,8 +18,8 @@ body {
 }
 
 #wrapper {
+  @include box-shadow(0 0 20px #e8c635);
   background: #fff;
-  box-shadow: 0 0 20px #e8c635; -moz-box-shadow: 0 0 20px #e8c635; -webkit-box-shadow: 0 0 20px #e8c635;
   width: 700px; margin: 20px auto; padding: 30px 20px 10px;
 }
 
@@ -62,25 +66,24 @@ h4, h5, h6 { font-size: inherit; }
   ul { margin-left: 20px; }
 }
 
-.button, .delete-button {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  padding: 5px;
-  color: #fff;
-  text-decoration: none;
-}
 .button {
   @include fancy-button(#1b6896, 16px);
 }
 .delete-button {
   @include fancy-button(#d22, 13px);
 }
+.delete-link {
+  color: #d22;
+  &:hover { text-decoration: none; }
+}
 
 form {
   input { padding: 2px 4px; }
   .field_with_errors { display: inline-block; }
   input, form label { margin-right: 5px; }
+}
+form.new_vocable {
+  input[type=text] { width: 225px; }
 }
 
 .vocables {
@@ -99,4 +102,10 @@ form {
   }
 }
 
-@media print {}
+@media screen {
+  @include print-utilities(screen);
+}
+
+@media print {
+  @include print-utilities;
+}

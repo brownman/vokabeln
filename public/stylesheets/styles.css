@@ -22,20 +22,30 @@
   outline: none;
 }
 
-/* line 4, ../../app/stylesheets/styles.scss */
+/* line 6, ../../app/stylesheets/styles.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 6, ../../app/stylesheets/styles.scss */
+/* line 8, ../../app/stylesheets/styles.scss */
 .hidden {
   position: absolute;
   left: -9999px;
   /* screen-reader accessible hiding */
 }
 
-/* line 10, ../../app/stylesheets/styles.scss */
+/* line 11, ../../app/stylesheets/styles.scss */
+.right {
+  float: right;
+}
+
+/* line 12, ../../app/stylesheets/styles.scss */
+.left {
+  float: left;
+}
+
+/* line 14, ../../app/stylesheets/styles.scss */
 body {
   background: #fff1b5;
   color: #000;
@@ -43,115 +53,106 @@ body {
   line-height: 24px;
 }
 
-/* line 16, ../../app/stylesheets/styles.scss */
+/* line 20, ../../app/stylesheets/styles.scss */
 #wrapper {
+  -moz-box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
+  -webkit-box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
+  -o-box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
+  box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
   background: #fff;
-  box-shadow: 0 0 20px #e8c635;
-  -moz-box-shadow: 0 0 20px #e8c635;
-  -webkit-box-shadow: 0 0 20px #e8c635;
   width: 700px;
   margin: 20px auto;
   padding: 30px 20px 10px;
 }
 
-/* line 22, ../../app/stylesheets/styles.scss */
+/* line 26, ../../app/stylesheets/styles.scss */
 h1, p, table, #lessons, .flash, .actions, .new_vocable, .errorExplanation {
   margin-bottom: 20px;
 }
 
-/* line 26, ../../app/stylesheets/styles.scss */
+/* line 30, ../../app/stylesheets/styles.scss */
 h1, h2, h3 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: normal;
 }
 
-/* line 27, ../../app/stylesheets/styles.scss */
+/* line 31, ../../app/stylesheets/styles.scss */
 h1 {
   font-size: 32px;
 }
 
-/* line 28, ../../app/stylesheets/styles.scss */
+/* line 32, ../../app/stylesheets/styles.scss */
 h4, h5, h6 {
   font-size: inherit;
 }
 
-/* line 30, ../../app/stylesheets/styles.scss */
+/* line 34, ../../app/stylesheets/styles.scss */
 #header {
   overflow: hidden;
   line-height: 42px;
 }
-/* line 32, ../../app/stylesheets/styles.scss */
+/* line 36, ../../app/stylesheets/styles.scss */
 #header h1 {
   float: left;
   width: 500px;
 }
-/* line 34, ../../app/stylesheets/styles.scss */
+/* line 38, ../../app/stylesheets/styles.scss */
 #header h1 .type {
   color: #888;
 }
 
-/* line 37, ../../app/stylesheets/styles.scss */
+/* line 41, ../../app/stylesheets/styles.scss */
 #header-right {
   float: right;
   width: 200px;
   text-align: right;
 }
 
-/* line 39, ../../app/stylesheets/styles.scss */
+/* line 43, ../../app/stylesheets/styles.scss */
 .flash {
   padding: 4px 8px;
   border-style: solid;
   border-width: 1px;
   color: #fff;
 }
-/* line 43, ../../app/stylesheets/styles.scss */
+/* line 47, ../../app/stylesheets/styles.scss */
 .flash.error {
   background: #fdd;
   border-color: #faa;
 }
-/* line 44, ../../app/stylesheets/styles.scss */
+/* line 48, ../../app/stylesheets/styles.scss */
 .flash.notice {
   background: #22d;
 }
-/* line 45, ../../app/stylesheets/styles.scss */
+/* line 49, ../../app/stylesheets/styles.scss */
 .flash.success {
   background: #afa;
   border-color: #dfd;
 }
 
-/* line 48, ../../app/stylesheets/styles.scss */
+/* line 52, ../../app/stylesheets/styles.scss */
 #lessons {
   list-style: none;
 }
-/* line 50, ../../app/stylesheets/styles.scss */
+/* line 54, ../../app/stylesheets/styles.scss */
 #lessons li.lesson {
   font-size: 18px;
   padding: 10px;
   border-top: 1px solid #aaa;
 }
 
-/* line 57, ../../app/stylesheets/styles.scss */
+/* line 61, ../../app/stylesheets/styles.scss */
 .errorExplanation {
   font-size: 14px;
   background: #fcc;
   padding: 10px;
 }
-/* line 62, ../../app/stylesheets/styles.scss */
+/* line 66, ../../app/stylesheets/styles.scss */
 .errorExplanation ul {
   margin-left: 20px;
 }
 
-/* line 65, ../../app/stylesheets/styles.scss */
-.button, .delete-button {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  padding: 5px;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* line 73, ../../app/stylesheets/styles.scss */
+/* line 69, ../../app/stylesheets/styles.scss */
 .button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -215,7 +216,7 @@ h4, h5, h6 {
   color: white;
 }
 
-/* line 76, ../../app/stylesheets/styles.scss */
+/* line 72, ../../app/stylesheets/styles.scss */
 .delete-button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -279,6 +280,15 @@ h4, h5, h6 {
   color: white;
 }
 
+/* line 75, ../../app/stylesheets/styles.scss */
+.delete-link {
+  color: #d22;
+}
+/* line 77, ../../app/stylesheets/styles.scss */
+.delete-link:hover {
+  text-decoration: none;
+}
+
 /* line 81, ../../app/stylesheets/styles.scss */
 form input {
   padding: 2px 4px;
@@ -293,40 +303,67 @@ form input, form form label {
 }
 
 /* line 86, ../../app/stylesheets/styles.scss */
+form.new_vocable input[type=text] {
+  width: 225px;
+}
+
+/* line 89, ../../app/stylesheets/styles.scss */
 .vocables {
   width: 100%;
   border-spacing: 0;
 }
-/* line 89, ../../app/stylesheets/styles.scss */
+/* line 92, ../../app/stylesheets/styles.scss */
 .vocables td, .vocables th {
   padding: 0 6px;
 }
-/* line 90, ../../app/stylesheets/styles.scss */
+/* line 93, ../../app/stylesheets/styles.scss */
 .vocables th {
   text-align: left;
 }
-/* line 91, ../../app/stylesheets/styles.scss */
+/* line 94, ../../app/stylesheets/styles.scss */
 .vocables thead {
   font-size: 15px;
   line-height: 30px;
 }
-/* line 93, ../../app/stylesheets/styles.scss */
+/* line 96, ../../app/stylesheets/styles.scss */
 .vocables thead tr {
   background: #666;
   color: #fff;
 }
-/* line 95, ../../app/stylesheets/styles.scss */
+/* line 98, ../../app/stylesheets/styles.scss */
 .vocables tbody {
   font-size: 13px;
   line-height: 25px;
 }
-/* line 97, ../../app/stylesheets/styles.scss */
+/* line 100, ../../app/stylesheets/styles.scss */
 .vocables tbody tr:nth-child(odd) {
   background: #fff;
 }
-/* line 98, ../../app/stylesheets/styles.scss */
+/* line 101, ../../app/stylesheets/styles.scss */
 .vocables tbody tr:nth-child(even) {
   background: #ccc;
 }
 
-@media print {}
+@media screen {
+  /* line 15, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/_print.scss */
+  .print-only {
+    display: none;
+  }
+}
+
+@media print {
+  /* line 7, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/_print.scss */
+  .noprint, .no-print {
+    display: none;
+  }
+
+  /* line 9, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/_print.scss */
+  address.print-only, blockquote.print-only, center.print-only, dir.print-only, div.print-only, dd.print-only, dl.print-only, dt.print-only, fieldset.print-only, form.print-only, frameset.print-only, h1.print-only, h2.print-only, h3.print-only, h4.print-only, h5.print-only, h6.print-only, hr.print-only, isindex.print-only, menu.print-only, noframes.print-only, noscript.print-only, ol.print-only, p.print-only, pre.print-only, ul.print-only {
+    display: block;
+  }
+
+  /* line 12, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/_print.scss */
+  a.print-only, abbr.print-only, acronym.print-only, b.print-only, basefont.print-only, bdo.print-only, big.print-only, br.print-only, cite.print-only, code.print-only, dfn.print-only, em.print-only, font.print-only, i.print-only, img.print-only, input.print-only, kbd.print-only, label.print-only, q.print-only, s.print-only, samp.print-only, select.print-only, small.print-only, span.print-only, strike.print-only, strong.print-only, sub.print-only, sup.print-only, textarea.print-only, tt.print-only, u.print-only, var.print-only {
+    display: inline;
+  }
+}

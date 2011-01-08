@@ -1,7 +1,7 @@
 <% form_for [@new_vocable.lesson, @new_vocable], :remote => true do |f| %>
   <%= f.error_messages my_error_opts %>
   <%= f.label :foreign, :class => :hidden %>
-  <%= f.text_field :foreign, { :placeholder => "Foreign expression", :autofocus => true, :required => true } %>
+  <%= f.text_field :foreign, { :placeholder => "Word", :autofocus => true, :required => true } %>
   <%= f.label :translation, :class => :hidden %>
   <%= f.text_field :translation, { :placeholder => "Translation", :required => true } %>
   <%= f.submit %>
