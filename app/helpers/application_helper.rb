@@ -1,6 +1,6 @@
 module ApplicationHelper
   def title
-    @title || "Vokabeln"
+    @title || app_name
   end
   
   def app_name
@@ -9,7 +9,7 @@ module ApplicationHelper
   
   def flash_content
     result = ""
-    [:error, :notice].each do |category|
+    [:success, :error, :notice].each do |category|
       if flash[category]
         result << "<div class='flash #{category.to_s}'>#{flash[category]}</div>"
       end

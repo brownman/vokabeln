@@ -33,8 +33,14 @@ class VocablesController < ApplicationController
   end
   
   def check
-    @vocable = Vocable.find(params[:id])
-    @success = @vocable.check_foreign(params[:vocable][:foreign])
+    vocable = Vocable.find(params[:id])
+    success = vocable.check_foreign(params[:vocable][:foreign])
+    if success
+      flash[:success] = ["Fine", "Well done"].sample
+    else
+      flash[:error] = "Nope, the expression is #{vocable.foreign}"
+    end
+    redirect_to ask_lesson_vocable_path(vocable.lesson, vocable.lesson.random_vocable)
   end
   
   def search

@@ -57,7 +57,6 @@ h4, h5, h6 { font-size: inherit; }
 .flash {
   padding: 4px 8px;
   border-style: solid; border-width: 1px;
-  color: #fff;
   &.error { background: #fdd; border-color: #faa; }
   &.notice { background: #22d; }
   &.success { background: #afa; border-color: #dfd; }

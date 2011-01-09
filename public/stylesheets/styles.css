@@ -139,46 +139,45 @@ h4, h5, h6 {
   padding: 4px 8px;
   border-style: solid;
   border-width: 1px;
-  color: #fff;
 }
-/* line 61, ../../app/stylesheets/styles.scss */
+/* line 60, ../../app/stylesheets/styles.scss */
 .flash.error {
   background: #fdd;
   border-color: #faa;
 }
-/* line 62, ../../app/stylesheets/styles.scss */
+/* line 61, ../../app/stylesheets/styles.scss */
 .flash.notice {
   background: #22d;
 }
-/* line 63, ../../app/stylesheets/styles.scss */
+/* line 62, ../../app/stylesheets/styles.scss */
 .flash.success {
   background: #afa;
   border-color: #dfd;
 }
 
-/* line 66, ../../app/stylesheets/styles.scss */
+/* line 65, ../../app/stylesheets/styles.scss */
 #lessons {
   list-style: none;
 }
-/* line 68, ../../app/stylesheets/styles.scss */
+/* line 67, ../../app/stylesheets/styles.scss */
 #lessons li.lesson {
   font-size: 18px;
   padding: 10px;
   border-top: 1px solid #aaa;
 }
 
-/* line 75, ../../app/stylesheets/styles.scss */
+/* line 74, ../../app/stylesheets/styles.scss */
 .errorExplanation {
   font-size: 14px;
   background: #fcc;
   padding: 10px;
 }
-/* line 80, ../../app/stylesheets/styles.scss */
+/* line 79, ../../app/stylesheets/styles.scss */
 .errorExplanation ul {
   margin-left: 20px;
 }
 
-/* line 83, ../../app/stylesheets/styles.scss */
+/* line 82, ../../app/stylesheets/styles.scss */
 .button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -242,7 +241,7 @@ h4, h5, h6 {
   color: white;
 }
 
-/* line 86, ../../app/stylesheets/styles.scss */
+/* line 85, ../../app/stylesheets/styles.scss */
 .delete-button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -306,71 +305,71 @@ h4, h5, h6 {
   color: white;
 }
 
-/* line 89, ../../app/stylesheets/styles.scss */
+/* line 88, ../../app/stylesheets/styles.scss */
 .delete-link {
   color: #d22;
 }
-/* line 91, ../../app/stylesheets/styles.scss */
+/* line 90, ../../app/stylesheets/styles.scss */
 .delete-link:hover {
   text-decoration: none;
 }
 
-/* line 95, ../../app/stylesheets/styles.scss */
+/* line 94, ../../app/stylesheets/styles.scss */
 form input {
   padding: 2px 4px;
 }
-/* line 96, ../../app/stylesheets/styles.scss */
+/* line 95, ../../app/stylesheets/styles.scss */
 form .field_with_errors {
   display: inline-block;
 }
-/* line 97, ../../app/stylesheets/styles.scss */
+/* line 96, ../../app/stylesheets/styles.scss */
 form input, form form label {
   margin-right: 5px;
 }
 
-/* line 100, ../../app/stylesheets/styles.scss */
+/* line 99, ../../app/stylesheets/styles.scss */
 form.new_vocable input[type=text] {
   width: 225px;
 }
 
-/* line 103, ../../app/stylesheets/styles.scss */
+/* line 102, ../../app/stylesheets/styles.scss */
 .vocables {
   width: 100%;
   border-spacing: 0;
 }
-/* line 106, ../../app/stylesheets/styles.scss */
+/* line 105, ../../app/stylesheets/styles.scss */
 .vocables td, .vocables th {
   padding: 0 6px;
 }
-/* line 107, ../../app/stylesheets/styles.scss */
+/* line 106, ../../app/stylesheets/styles.scss */
 .vocables th {
   text-align: left;
 }
-/* line 108, ../../app/stylesheets/styles.scss */
+/* line 107, ../../app/stylesheets/styles.scss */
 .vocables thead {
   font-size: 15px;
   line-height: 30px;
 }
-/* line 110, ../../app/stylesheets/styles.scss */
+/* line 109, ../../app/stylesheets/styles.scss */
 .vocables thead tr {
   background: #666;
   color: #fff;
 }
-/* line 112, ../../app/stylesheets/styles.scss */
+/* line 111, ../../app/stylesheets/styles.scss */
 .vocables tbody {
   font-size: 13px;
   line-height: 25px;
 }
-/* line 114, ../../app/stylesheets/styles.scss */
+/* line 113, ../../app/stylesheets/styles.scss */
 .vocables tbody tr:nth-child(odd) {
   background: #fff;
 }
-/* line 115, ../../app/stylesheets/styles.scss */
+/* line 114, ../../app/stylesheets/styles.scss */
 .vocables tbody tr:nth-child(even) {
   background: #ccc;
 }
 
-/* line 120, ../../app/stylesheets/styles.scss */
+/* line 119, ../../app/stylesheets/styles.scss */
 #header #outer-404 {
   font-size: 250px;
   line-height: 250px;
@@ -378,7 +377,7 @@ form.new_vocable input[type=text] {
   text-align: center;
 }
 
-/* line 125, ../../app/stylesheets/styles.scss */
+/* line 124, ../../app/stylesheets/styles.scss */
 #inner-404 {
   font-family: Georgia, "Times New Roman", serif;
   position: absolute;
