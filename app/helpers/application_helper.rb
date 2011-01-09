@@ -11,7 +11,7 @@ module ApplicationHelper
     result = ""
     [:success, :error, :notice].each do |category|
       if flash[category]
-        result << "<div class='flash #{category.to_s}'>#{flash[category]}</div>"
+        result << "<div class='flash #{category.to_s}'>#{h flash[category]}</div>"
       end
     end
     result

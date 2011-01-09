@@ -29,10 +29,9 @@ class LessonsController < ApplicationController
   def destroy
     lesson = Lesson.find(params[:id])
     if lesson.destroy
-      redirect_to :action => :index, :notice => "Lesson &#8220;#{CGI.escapeHTML lesson.name}&#8221; was deleted."
+      redirect_to({ :action => 'index' }, :flash => { :notice => "Lesson “#{lesson.name}” was deleted." })
     else
-      flash[:error] = "Lesson could not be deleted."
-      redirect_to lesson_path(lesson)
+      redirect_to lesson_path(lesson), :flash => { :error => "Lesson could not be deleted." }
     end
   end
   
