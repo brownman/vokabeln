@@ -92,7 +92,7 @@ body {
 }
 
 /* line 39, ../../app/stylesheets/styles.scss */
-h1, p, table, #lessons, .flash, .actions, .new_vocable, .errorExplanation {
+h1, p, table, #lessons, .flash, .actions, .new_vocable, .ask_vocable, .errorExplanation {
   margin-bottom: 20px;
 }
 
@@ -330,49 +330,65 @@ form.new_vocable input[type=text] {
   width: 225px;
 }
 
-/* line 102, ../../app/stylesheets/styles.scss */
+/* line 101, ../../app/stylesheets/styles.scss */
+form.ask_vocable {
+  font-size: 24px;
+}
+/* line 103, ../../app/stylesheets/styles.scss */
+form.ask_vocable label {
+  margin-right: 15px;
+  display: inline-block;
+}
+/* line 104, ../../app/stylesheets/styles.scss */
+form.ask_vocable input[type=text] {
+  font-size: 20px;
+  line-height: 24px;
+  width: 250px;
+}
+
+/* line 107, ../../app/stylesheets/styles.scss */
 .vocables {
   width: 100%;
   border-spacing: 0;
 }
-/* line 105, ../../app/stylesheets/styles.scss */
+/* line 110, ../../app/stylesheets/styles.scss */
 .vocables td, .vocables th {
   padding: 0 6px;
 }
-/* line 106, ../../app/stylesheets/styles.scss */
+/* line 111, ../../app/stylesheets/styles.scss */
 .vocables th {
   text-align: left;
 }
-/* line 107, ../../app/stylesheets/styles.scss */
+/* line 112, ../../app/stylesheets/styles.scss */
 .vocables thead {
   font-size: 15px;
   line-height: 30px;
 }
-/* line 109, ../../app/stylesheets/styles.scss */
+/* line 114, ../../app/stylesheets/styles.scss */
 .vocables thead tr {
   background: #666;
   color: #fff;
 }
-/* line 111, ../../app/stylesheets/styles.scss */
+/* line 116, ../../app/stylesheets/styles.scss */
 .vocables tbody {
   font-size: 13px;
   line-height: 25px;
 }
-/* line 113, ../../app/stylesheets/styles.scss */
+/* line 118, ../../app/stylesheets/styles.scss */
 .vocables tbody tr:nth-child(odd) {
   background: #fff;
 }
-/* line 114, ../../app/stylesheets/styles.scss */
+/* line 119, ../../app/stylesheets/styles.scss */
 .vocables tbody tr:nth-child(even) {
   background: #ccc;
 }
 
-/* line 118, ../../app/stylesheets/styles.scss */
+/* line 123, ../../app/stylesheets/styles.scss */
 .attempts {
   display: inline;
   list-style: none;
 }
-/* line 121, ../../app/stylesheets/styles.scss */
+/* line 126, ../../app/stylesheets/styles.scss */
 .attempts .attempt {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -384,16 +400,16 @@ form.new_vocable input[type=text] {
   height: 10px;
   display: inline-block;
 }
-/* line 125, ../../app/stylesheets/styles.scss */
+/* line 130, ../../app/stylesheets/styles.scss */
 .attempts .attempt.successful {
   background: #0c0;
 }
-/* line 126, ../../app/stylesheets/styles.scss */
+/* line 131, ../../app/stylesheets/styles.scss */
 .attempts .attempt.unsuccessful {
   background: #c00;
 }
 
-/* line 131, ../../app/stylesheets/styles.scss */
+/* line 136, ../../app/stylesheets/styles.scss */
 #header #outer-404 {
   font-size: 250px;
   line-height: 250px;
@@ -401,7 +417,7 @@ form.new_vocable input[type=text] {
   text-align: center;
 }
 
-/* line 136, ../../app/stylesheets/styles.scss */
+/* line 141, ../../app/stylesheets/styles.scss */
 #inner-404 {
   font-family: Georgia, "Times New Roman", serif;
   position: absolute;

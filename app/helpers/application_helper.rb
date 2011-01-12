@@ -20,4 +20,15 @@ module ApplicationHelper
   def my_error_opts
     { :header_message => 'Error:', :header_tag => :h4, :message => '' }
   end
+  
+  BREADCRUMB_SEPARATOR = " / "
+  def breadcrumb *pages
+    pages.map do |page|
+      if page.is_a? Array
+        raw link_to *page
+      else
+        h page
+      end
+    end.join(BREADCRUMB_SEPARATOR)
+  end
 end

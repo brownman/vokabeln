@@ -36,7 +36,7 @@ body {
   width: 700px; margin: 20px auto; padding: 30px 20px 10px;
 }
 
-h1, p, table, #lessons, .flash, .actions, .new_vocable, .errorExplanation {
+h1, p, table, #lessons, .flash, .actions, .new_vocable, .ask_vocable, .errorExplanation {
   margin-bottom: 20px;
 }
 
@@ -97,6 +97,11 @@ form {
 }
 form.new_vocable {
   input[type=text] { width: 225px; }
+}
+form.ask_vocable {
+  font-size: 24px;
+  label { margin-right: 15px; display: inline-block; }
+  input[type=text] { font-size: 20px; line-height: 24px; width: 250px; }
 }
 
 .vocables {
