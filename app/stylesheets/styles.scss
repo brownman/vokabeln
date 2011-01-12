@@ -1,6 +1,7 @@
 //@import "compass/reset";
 @import "fancy-buttons";
 @import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
 @import "compass/utilities/print";
 
 @mixin serif {
@@ -30,7 +31,7 @@ body {
 }
 
 #wrapper {
-  @include box-shadow(0 0 20px #e8c635);
+  @include box-shadow(#e8c635 0 0 20px);
   background: #fff;
   width: 700px; margin: 20px auto; padding: 30px 20px 10px;
 }
@@ -111,6 +112,18 @@ form.new_vocable {
     font-size: 13px; line-height: 25px;
     tr:nth-child(odd) { background: #fff; }
     tr:nth-child(even) { background: #ccc; }
+  }
+}
+
+.attempts {
+  display: inline;
+  list-style: none;
+  .attempt {
+    @include border-radius(5px);
+    width: 10px; height: 10px;
+    display: inline-block;
+    &.successful { background: #0c0; }
+    &.unsuccessful { background: #c00; }
   }
 }
 

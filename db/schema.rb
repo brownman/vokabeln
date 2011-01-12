@@ -10,7 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110106074927) do
+ActiveRecord::Schema.define(:version => 20110112194123) do
+
+  create_table "attempts", :force => true do |t|
+    t.integer  "vocable_id"
+    t.datetime "date"
+    t.boolean  "success"
+  end
 
   create_table "lessons", :force => true do |t|
     t.datetime "created_at"

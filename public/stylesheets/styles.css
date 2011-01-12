@@ -22,55 +22,55 @@
   outline: none;
 }
 
-/* line 13, ../../app/stylesheets/styles.scss */
+/* line 14, ../../app/stylesheets/styles.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 15, ../../app/stylesheets/styles.scss */
+/* line 16, ../../app/stylesheets/styles.scss */
 .hidden {
   position: absolute;
   left: -9999px;
   /* screen-reader accessible hiding */
 }
 
-/* line 18, ../../app/stylesheets/styles.scss */
+/* line 19, ../../app/stylesheets/styles.scss */
 .totally-hidden {
   display: none;
 }
 
-/* line 19, ../../app/stylesheets/styles.scss */
+/* line 20, ../../app/stylesheets/styles.scss */
 .right {
   float: right;
 }
 
-/* line 20, ../../app/stylesheets/styles.scss */
+/* line 21, ../../app/stylesheets/styles.scss */
 .left {
   float: left;
 }
 
-/* line 21, ../../app/stylesheets/styles.scss */
+/* line 22, ../../app/stylesheets/styles.scss */
 .align-left {
   text-align: left;
 }
 
-/* line 22, ../../app/stylesheets/styles.scss */
+/* line 23, ../../app/stylesheets/styles.scss */
 .align-center {
   text-align: center;
 }
 
-/* line 23, ../../app/stylesheets/styles.scss */
+/* line 24, ../../app/stylesheets/styles.scss */
 .align-right {
   text-align: right;
 }
 
-/* line 24, ../../app/stylesheets/styles.scss */
+/* line 25, ../../app/stylesheets/styles.scss */
 .serif {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* line 26, ../../app/stylesheets/styles.scss */
+/* line 27, ../../app/stylesheets/styles.scss */
 body {
   font-family: Helvetica, Arial, sans-serif;
   background: #fff1b5;
@@ -79,66 +79,64 @@ body {
   line-height: 24px;
 }
 
-/* line 32, ../../app/stylesheets/styles.scss */
+/* line 33, ../../app/stylesheets/styles.scss */
 #wrapper {
-  -moz-box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
-  -webkit-box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
-  -o-box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
-  box-shadow: 0 0 20px #e8c635 1px 1px 5px 0;
+  -moz-box-shadow: #e8c635 0 0 20px 1px 1px 5px 0;
+  -webkit-box-shadow: #e8c635 0 0 20px 1px 1px 5px 0;
+  -o-box-shadow: #e8c635 0 0 20px 1px 1px 5px 0;
+  box-shadow: #e8c635 0 0 20px 1px 1px 5px 0;
   background: #fff;
   width: 700px;
   margin: 20px auto;
   padding: 30px 20px 10px;
 }
 
-/* line 38, ../../app/stylesheets/styles.scss */
+/* line 39, ../../app/stylesheets/styles.scss */
 h1, p, table, #lessons, .flash, .actions, .new_vocable, .errorExplanation {
   margin-bottom: 20px;
 }
 
-/* line 42, ../../app/stylesheets/styles.scss */
+/* line 43, ../../app/stylesheets/styles.scss */
 h1, h2, h3 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: normal;
 }
 
-/* line 43, ../../app/stylesheets/styles.scss */
+/* line 44, ../../app/stylesheets/styles.scss */
 h4, h5, h6 {
   font-size: inherit;
 }
 
-/* line 45, ../../app/stylesheets/styles.scss */
+/* line 46, ../../app/stylesheets/styles.scss */
 #header {
   overflow: hidden;
   line-height: 42px;
   position: relative;
 }
-/* line 48, ../../app/stylesheets/styles.scss */
+/* line 49, ../../app/stylesheets/styles.scss */
 #header h1 {
   font-size: 32px;
   float: left;
   width: 500px;
 }
-/* line 51, ../../app/stylesheets/styles.scss */
+/* line 52, ../../app/stylesheets/styles.scss */
 #header h1.full-width {
   width: 100%;
 }
-/* line 52, ../../app/stylesheets/styles.scss */
+/* line 53, ../../app/stylesheets/styles.scss */
 #header h1 .type {
   color: #888;
 }
-/* line 54, ../../app/stylesheets/styles.scss */
+/* line 55, ../../app/stylesheets/styles.scss */
 #header #header-right {
   float: right;
   width: 200px;
   text-align: right;
 }
 
-/* line 57, ../../app/stylesheets/styles.scss */
+/* line 58, ../../app/stylesheets/styles.scss */
 .flash {
   padding: 4px 8px;
-  border-style: solid;
-  border-width: 1px;
 }
 /* line 60, ../../app/stylesheets/styles.scss */
 .flash.error {
@@ -369,7 +367,33 @@ form.new_vocable input[type=text] {
   background: #ccc;
 }
 
-/* line 119, ../../app/stylesheets/styles.scss */
+/* line 118, ../../app/stylesheets/styles.scss */
+.attempts {
+  display: inline;
+  list-style: none;
+}
+/* line 121, ../../app/stylesheets/styles.scss */
+.attempts .attempt {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+/* line 125, ../../app/stylesheets/styles.scss */
+.attempts .attempt.successful {
+  background: #0c0;
+}
+/* line 126, ../../app/stylesheets/styles.scss */
+.attempts .attempt.unsuccessful {
+  background: #c00;
+}
+
+/* line 131, ../../app/stylesheets/styles.scss */
 #header #outer-404 {
   font-size: 250px;
   line-height: 250px;
@@ -377,7 +401,7 @@ form.new_vocable input[type=text] {
   text-align: center;
 }
 
-/* line 124, ../../app/stylesheets/styles.scss */
+/* line 136, ../../app/stylesheets/styles.scss */
 #inner-404 {
   font-family: Georgia, "Times New Roman", serif;
   position: absolute;

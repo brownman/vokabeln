@@ -7,6 +7,9 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+# Models
+gem 'default_value_for', '>= 1.0.1'
+
 # Frontend
 gem 'jquery-rails', '>= 0.2.6'
 gem 'compass', '>= 0.10.6'

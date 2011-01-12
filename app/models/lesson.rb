@@ -10,6 +10,7 @@ class Lesson < ActiveRecord::Base
   end
   
   def random_vocable
+    # TODO: Make this more efficient (maybe with sql offset?)
     vocables[rand(vocables.size)]
   end
 end

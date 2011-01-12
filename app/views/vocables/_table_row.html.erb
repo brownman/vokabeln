@@ -2,5 +2,13 @@
   <td><%= vocable.foreign %></td>
   <td><%= vocable.translation %></td>
   <td><%= link_to 'Delete', [vocable.lesson, vocable], :method => :delete, :class => 'delete-link', :remote => true %></td>
-  <td></td>
+  <td>
+    <ol class="attempts">
+      <% for attempt in vocable.attempts -%>
+        <li class="attempt <%= attempt.success? ? "successful" : "unsuccessful" %>">
+          <span class="hidden"><%= attempt.success? ? "Successful" : "Unsuccessful" %></span>
+        </li>
+      <% end -%>
+    </ol>
+  </td>
 </tr>
