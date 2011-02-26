@@ -1,8 +1,10 @@
+<% lesson = @vocable.lesson -%>
+
 <% content_for :header do -%>
-  <h1><%= raw breadcrumb(["Lessons", lessons_path], [@vocable.lesson.name, @vocable.lesson], "Test") %></h1>
+  <h1><%= raw breadcrumb([lesson.user.username, lesson.user], [lesson.name, user_lesson_path(lesson.user, lesson)], "Test") %></h1>
 <% end -%>
 
-<%= form_for [@vocable.lesson, @vocable], :url => check_lesson_vocable_path(@vocable.lesson, @vocable), :html => { :class => 'ask_vocable' } do |f| -%>
+<%= form_for [lesson.user, lesson, @vocable], :url => check_user_lesson_vocable_path(lesson, @vocable), :html => { :class => 'ask_vocable' } do |f| -%>
   <%= f.label :foreign, raw("Translate <b>“#{@vocable.translation}”</b>") %>
   <%= f.text_field :foreign, :placeholder => 'Translation', :value => '', :autofocus => true %>
 <% end -%>

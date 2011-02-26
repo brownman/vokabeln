@@ -1,15 +1,8 @@
 # coding: utf-8
 
 class LessonsController < ApplicationController
-  def index
-    @new_lesson ||= Lesson.new
-    @lessons = Lesson.all
-    
-    respond_to do |format|
-      format.js { render 'index.html', :layout => 'insert_content' }
-      format.html
-    end
-  end
+  before_filter :login_required, :except => [:show]
+  before_filter :is_owner, :except => [:show, :create]
   
   def show
     @lesson = Lesson.find(params[:id])
@@ -17,9 +10,9 @@ class LessonsController < ApplicationController
   end
   
   def create
-    @new_lesson = Lesson.new(params[:lesson])
+    @new_lesson = current_user.lessons.create(params[:lesson])
     if @new_lesson.save
-      redirect_to lesson_path(@new_lesson)
+      redirect_to user_lesson_path(current_user, @new_lesson)
     else
       index
       render :index
@@ -29,14 +22,22 @@ class LessonsController < ApplicationController
   def destroy
     lesson = Lesson.find(params[:id])
     if lesson.destroy
-      redirect_to({ :action => 'index' }, :flash => { :notice => "Lesson “#{lesson.name}” was deleted." })
+      redirect_to(lesson.user, :flash => { :notice => "Lesson “#{lesson.name}” was deleted." })
     else
-      redirect_to lesson_path(lesson), :flash => { :error => "Lesson could not be deleted." }
+      redirect_to user_lesson_path(lesson.user, lesson), :flash => { :error => "Lesson could not be deleted." }
     end
   end
   
   def test
     lesson = Lesson.find(params[:id])
-    redirect_to ask_lesson_vocable_path(lesson, lesson.random_vocable)
+    redirect_to ask_user_lesson_vocable_path(lesson.user, lesson, lesson.random_vocable)
+  end
+
+  private
+
+  def is_owner
+    unless Lesson.find(params[:id]).user == current_user
+      redirect_to :back
+    end
   end
 end

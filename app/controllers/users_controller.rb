@@ -1,5 +1,19 @@
 class UsersController < ApplicationController
-  before_filter :login_required, :except => [:new, :create]
+  before_filter :login_required, :except => [:index, :show, :new, :create]
+
+  def index
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @new_lesson ||= current_user.lessons.new if logged_in?
+    
+    respond_to do |format|
+      format.js { render 'show.html', :layout => 'insert_content' }
+      format.html
+    end
+  end
 
   def new
     @user = User.new

@@ -1,0 +1,19 @@
+<% title @user.username %>
+
+<% content_for :header_right, render('vocables/search_form') %>
+
+<% if @user.lessons.empty? %>
+  <% if @user == current_user -%>
+    <p>Oh, you don't have any lessons yet! Create one:</p>
+  <% else -%>
+    <p>This user hasn't created any lessons yet.</p>
+  <% end -%>
+<% end %>
+<ul id="lessons">
+  <% for lesson in @user.lessons -%>
+    <li class="lesson"><%= link_to lesson.name, user_lesson_path(lesson.user, lesson) %></li>
+  <% end %>
+  <% if @user == current_user -%>
+    <li class="lesson"><%= render "lessons/form" %></li>
+  <% end -%>
+</ul>

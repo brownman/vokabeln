@@ -1,5 +1,9 @@
 class VocablesController < ApplicationController
+  before_filter :is_owner, :except => [:create, :search]
+  
   def create
+    redirect_to :back unless User.find(params[:user_id]) == current_user
+    
     @lesson = Lesson.find(params[:lesson_id])
     @new_vocable = @lesson.vocables.create(params[:vocable])
     
@@ -39,7 +43,7 @@ class VocablesController < ApplicationController
     else
       flash[:error] = "Nope, the expression is #{vocable.foreign}"
     end
-    redirect_to ask_lesson_vocable_path(vocable.lesson, vocable.lesson.random_vocable)
+    redirect_to ask_user_lesson_vocable_path(vocable.lesson.user, vocable.lesson, vocable.lesson.random_vocable)
   end
   
   def search
@@ -52,7 +56,15 @@ class VocablesController < ApplicationController
         format.html
       end
     else
-      redirect_to lessons_path
+      redirect_to root_path
+    end
+  end
+
+  private
+
+  def is_owner
+    unless Vocable.find(params[:id]).lesson.user == current_user
+      redirect_to :back
     end
   end
 end

@@ -1,7 +1,7 @@
 <tr class="vocable" id="vocable_<%= vocable.id %>">
   <td><%= vocable.foreign %></td>
   <td><%= vocable.translation %></td>
-  <td><%= link_to 'Delete', [vocable.lesson, vocable], :method => :delete, :class => 'delete-link', :remote => true %></td>
+  <td><%= link_to 'Delete', user_lesson_vocable_path(vocable.lesson.user, vocable.lesson, vocable), :method => :delete, :class => 'delete-link', :remote => true if vocable.lesson.user == current_user %></td>
   <td>
     <ol class="attempts">
       <% for attempt in vocable.attempts -%>

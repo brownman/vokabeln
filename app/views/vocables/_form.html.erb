@@ -1,4 +1,4 @@
-<% form_for [@new_vocable.lesson, @new_vocable], :remote => true do |f| %>
+<% form_for [@new_vocable.lesson.user, @new_vocable.lesson, @new_vocable], :remote => true do |f| %>
   <%= f.error_messages my_error_opts %>
   <%= f.label :foreign, :class => :hidden %>
   <%= f.text_field :foreign, { :placeholder => "Word", :autofocus => true, :required => true } %>

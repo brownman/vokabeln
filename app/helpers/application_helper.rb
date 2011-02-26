@@ -2,11 +2,11 @@ module ApplicationHelper
   def title page_title
     content_for(:title) { page_title }
   end
-  
+
   def app_name
     "Vokabeln"
   end
-  
+
   def flash_content
     result = ""
     [:success, :error, :notice].each do |category|
@@ -16,11 +16,11 @@ module ApplicationHelper
     end
     result
   end
-  
+
   def my_error_opts
     { :header_message => 'Error:', :header_tag => :h4, :message => '' }
   end
-  
+
   BREADCRUMB_SEPARATOR = " / "
   def breadcrumb *pages
     pages.map do |page|
