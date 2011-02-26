@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def title
-    @title || app_name
+  def title page_title
+    content_for(:title) { page_title }
   end
   
   def app_name

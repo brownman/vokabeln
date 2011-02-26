@@ -12,7 +12,6 @@ class VocablesController < ApplicationController
         # format.json { render :json => @new_vocable.errors }
         format.js
         format.html do
-          @title = @lesson.name
           render 'lessons/show'
         end
       end

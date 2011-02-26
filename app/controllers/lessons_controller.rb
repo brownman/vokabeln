@@ -2,7 +2,6 @@
 
 class LessonsController < ApplicationController
   def index
-    @title = "Lessons"
     @new_lesson ||= Lesson.new
     @lessons = Lesson.all
     
@@ -14,7 +13,6 @@ class LessonsController < ApplicationController
   
   def show
     @lesson = Lesson.find(params[:id])
-    @title = @lesson.name
     @new_vocable ||= @lesson.vocables.build
   end
   

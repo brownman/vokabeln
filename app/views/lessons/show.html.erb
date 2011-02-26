@@ -1,3 +1,5 @@
+<% title @lesson.name -%>
+
 <% content_for :header do -%>
   <h1><%= raw breadcrumb(["Lessons", lessons_path], @lesson.name) %></h1>
 <% end -%>
