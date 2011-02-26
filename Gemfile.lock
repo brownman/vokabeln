@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     arel (2.0.4)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
     compass (0.10.6)
       haml (>= 3.0.4)
@@ -48,6 +49,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mocha (0.9.12)
+    nifty-generators (0.4.5)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -78,9 +81,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   compass (>= 0.10.6)
   default_value_for (>= 1.0.1)
   fancy-buttons (>= 1.0.3)
   jquery-rails (>= 0.2.6)
+  mocha
+  nifty-generators
   rails (= 3.0.3)
   sqlite3-ruby
