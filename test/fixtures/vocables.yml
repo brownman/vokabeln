@@ -1,9 +1,138 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# Numbers
 
 one:
-  foreign: MyString
-  translation: MyString
+  foreign: one
+  translation: eins
 
 two:
-  foreign: MyString
-  translation: MyString
+  foreign: two
+  translation: zwei
+
+three:
+  foreign: three
+  translation: drei
+  lesson: numbers
+
+four:
+  foreign: four
+  translation: vier
+  lesson: numbers
+
+five:
+  foreign: five
+  translation: fünf
+  lesson: numbers
+
+six:
+  foreign: six
+  translation: sechs
+  lesson: numbers
+
+seven:
+  foreign: seven
+  translation: sieben
+  lesson: numbers
+
+eight:
+  foreign: eight
+  translation: acht
+  lesson: numbers
+
+nine:
+  foreign: nine
+  translation: neun
+  lesson: numbers
+
+ten:
+  foreign: ten
+  translation: zehn
+  lesson: numbers
+
+
+# Numbers 2
+
+eleven:
+  foreign: eleven
+  translation: elf
+  lesson: numbers2
+
+twelve:
+  foreign: twelve
+  translation: zwölf
+  lesson: numbers2
+
+thirteen:
+  foreign: thirteen
+  translation: dreizehn
+  lesson: numbers2
+
+fourteen:
+  foreign: fourteen
+  translation: vierzehn
+  lesson: numbers2
+
+fifteen:
+  foreign: fifteen
+  translation: fünfzehn
+  lesson: numbers2
+
+
+# Animals
+
+dog:
+  foreign: dog
+  translation: Hund
+  lesson: animals
+
+cat:
+  foreign: cat
+  translation: Katze
+  lesson: animals
+
+mouse:
+  foreign: mouse
+  translation: Maus
+  lesson: animals
+
+dolphin:
+  foreign: dolphin
+  translation: Delfin
+  lesson: animals
+
+horse:
+  foreign: horse
+  translation: Pferd
+  lesson: animals
+
+pig:
+  foreign: pig
+  translation: Schwein
+  lesson: animals
+
+
+# Colors
+
+red:
+  foreign: red
+  translation: rot
+  lesson: colors
+
+green:
+  foreign: green
+  translation: grün
+  lesson: colors
+
+blue:
+  foreign: blue
+  translation: blau
+  lesson: colors
+
+orange:
+  foreign: orange
+  translation: orange
+  lesson: colors
+
+yellow:
+  foreign: yellow
+  translation: gelb
+  lesson: colors

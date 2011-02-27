@@ -1,4 +1,5 @@
 # password: "secret"
+
 foo:
   username: foo
   email: foo@example.com
